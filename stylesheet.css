@@ -1,0 +1,222 @@
+div.pyroe {
+  float:left;
+  background-color:#A8A8A8;
+}
+
+div.sample {
+  float:left;
+  background-color:#A8A8A8;
+}
+
+div.sample-container {
+  float:left;
+  background-color:#A8A8A8;
+  border-radius: 15px;
+  margin-left: 10px;
+  width: 900px;
+  min-width: 900px
+}
+
+div.pyroe-container {
+  float:left;
+  background-color:#A8A8A8;
+  border-radius: 15px;
+  margin-left: 10px;
+  width: 800px;
+  min-width: 800px;
+}
+
+table.pyroe-table {
+  margin:auto;
+  background-color: gainsboro;
+  width: 770px;
+  overflow-x: auto;
+  max-height: 250px;
+}
+
+table.sample-table {
+  margin:auto;
+  background-color: gainsboro;
+  width: 850px;
+  overflow-x: auto;
+  max-height: 250px;
+}
+
+th.sample {
+  font-size:11px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+th.pyroe {
+  font-size: 13px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: center;
+}
+
+td {
+  border-bottom: .5px solid black;
+}
+
+div.scroll {
+  overflow-x:scroll;
+  overflow-y: auto;
+  max-width: 770px;
+  max-height: 250px;
+}
+
+div.scroll-samp {
+  overflow-x:scroll;
+  overflow-y: auto;
+  max-width: 870px;
+  max-height: 250px;
+}
+
+span {
+  cursor: default;
+}
+
+span.file-chose {
+  margin-left: 5px;
+}
+
+span.chemistry {
+  width: 100px;
+  background-color: white;
+  border-radius: 0px 15px 15px 0px;
+  border: 2px solid #FF8080;
+  border-left: none;
+}
+
+label.file {
+  align-items: center;
+  margin-top:auto;
+  margin-bottom: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100px;
+  height: 26px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left:10px;
+  background-color: #85E79C;
+  color: white;
+  cursor: pointer;
+}
+
+button.add{
+  margin: 0 auto;
+  width:100px;
+  cursor: pointer;
+}
+
+input.file::-webkit-file-upload-button {
+  border-radius: 6px;
+  cursor: pointer;
+  border: 0px;
+}
+
+a:hover { text-decoration: none; }
+
+div.prepend {
+  text-align:center;
+  align-items: center;
+  margin-right:0px;
+  background-color: #095078;
+  border-radius: 15px 0px 0px 15px;
+  border: 2px solid #FF8080;;
+  color:#FF8080;
+  padding:0px;
+  width:120px;
+  border-right:0px;
+}
+
+div.prepend-wide {
+  text-align:center;
+  align-items: center;
+  margin-right:0px;
+  background-color: #095078;
+  border-radius: 15px 0px 0px 15px;
+  border: 2px solid #FF8080;;
+  color:#FF8080;
+  padding:0px;
+  width: 160px;
+  border-right:0px;
+}
+
+div.prepend-exwide {
+  text-align:center;
+  align-items: center;
+  margin-right:0px;
+  background-color: #095078;
+  border-radius: 15px 0px 0px 15px;
+  border: 2px solid #FF8080;;
+  color:#FF8080;
+  padding:0px;
+  width: 200px;
+  border-right:0px;
+}
+
+
+button.prepend {
+  border-radius: 15px;
+  width: 120px;
+  color: #85E79C;
+  background-color:#095078;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+button.prepend:focus {
+  box-shadow: none;
+}
+
+button.prepend:hover {
+  background-color:#095078;
+}
+
+
+div.append {
+  text-align:center;
+  align-items: center;
+  margin-right:0px;
+  background-color: #095078;
+  border-radius: 0px 15px 15px 0px;
+  border: 2px solid #FF8080;;
+  color:#FF8080;
+  padding:0px;
+  width:150px;
+  border-left: 0px;
+}
+
+span.prepend {
+  margin-left: 6px;
+  text-align:center;
+  align-items: center;
+  color: #85E79C;
+  background-color: #095078;
+  border: 0px;
+  border-radius: 15px;
+  padding-left: 6px;
+}
+
+
+input.text {
+  width:450px;
+  border-top: 2px solid #FF8080;;
+  border-bottom: 2px solid #FF8080;;
+  border-left: 0px;
+  border-right: 0px;
+  padding-left: 10px;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+}

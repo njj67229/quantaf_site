@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="./stylesheet.css" rel="stylesheet">
+    <title>Generate TSV Files for quantAF - Alevin-Fry Quanitification Pipeline</title>
+</head>
+
+<body>
+    <h3>Generate tsv files</h3>
+    <div class="mb-3 container pyroe-container">
+        <h4 style="text-align: center; width: 800px;" class="mb-3">Pyroe: Reference Files</h4>
+        <div class="mb-3 input-group pyroe">
+            <div class = "input-group-prepend prepend">
+                <span class="input-group-text prepend">Reference</span>
+            </div>
+            <input id="ref-name" class="text" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;;" type="text" value="" placeholder="Reference name">    
+        </div>
+        <div class="mb-3 input-group pyroe">
+            <div class = "input-group-prepend prepend">
+                <span class="input-group-text prepend">ref file</span>
+            </div>
+            <input id="ref-path" type="text" value="" class="text" placeholder="Upload file or provide URL">
+            <div class="input-group-append append">
+                <input class="file" type="file" id="ref-file" hidden>
+                <label for="ref-file" class="file">Choose File</label>
+                <span title="" id="ref-chosen" class="file-chose"></span>
+            </div>
+        </div>
+        <div class="input-group pyroe mb-3">   
+            <div class = "input-group-prepend prepend">
+                <span class="input-group-text prepend">fasta file</span>
+            </div>
+            <input id="fasta-path" type="text" class="text" value="" placeholder="Upload file, provide URL, or relative path within reference files">
+            <div class="input-group-append append">
+                <input class="file" type="file" id="fasta-file" hidden>
+                <label for="fasta-file" class="file">Choose File</label>
+                <span title="" id="fasta-chosen" class="file-chose"></span>
+            </div>
+        </div>
+        <div class="input-group pyroe mb-3">        
+            <div class = "input-group-prepend prepend">
+                <span class="input-group-text prepend">gtf file</span>
+            </div>
+            <input id="gtf-path" type="text" class="text" value="" placeholder="Upload file, provide URL, or relative path within reference files">
+            <div class="input-group-append append">
+                <input class="file" type="file" id="gtf-file" hidden>
+                <label for="gtf-file" class="file">Choose File</label>
+                <span title="" id="gtf-chosen" class="file-chose"></span>
+            </div>
+        </div>
+        <div class="input-group pyroe mb-3">
+            <span>Additional Options</input>
+            <a id='add-opts' style="color: black" data-toggle="collapse" href="#additional-opts" role="button" aria-expanded="false" aria-controls="additional-opts">&#9660;</a>
+        </div>
+        <div class="collapse multi-collapse card card-collapse pyroe" style="border:0px;" id="additional-opts">
+            <div class="input-group pyroe mb-3">        
+                <div class = "input-group-prepend prepend-wide">
+                    <span class="input-group-text prepend">Spliced Fasta</span>
+                </div>
+                <input id="add-spl-path" type="text" class="text" value="" placeholder="Upload file, provide URL, or relative path within reference files">
+                <div class="input-group-append append">
+                    <input class="file" type="file" id="add-spl-file" hidden>
+                    <label for="add-spl-file" class="file">Choose File</label>
+                    <span title="" id="add-spl-chosen" class="file-chose"></span>
+                </div>
+            </div>
+            <div class="input-group pyroe mb-3">        
+                <div class = "input-group-prepend prepend-wide">
+                    <span class="input-group-text prepend">Unspliced Fasta</span>
+                </div>
+                <input id="add-un-spl-path" type="text" class="text" value="" placeholder="Upload file, provide URL, or relative path within reference files">
+                <div class="input-group-append append">
+                    <input class="file" type="file" id="add-un-spl-file" hidden>
+                    <label for="add-un-spl-file" class="file">Choose File</label>
+                    <span title="" id="add-un-spl-chosen" class="file-chose"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input-group pyroe mb-3">
+            <button id="pyroe-add-files" class="add">Add Files</button>
+        </div>
+        <div class="pyroe scroll mb-3">
+            <table class="table pyroe-table" id="pyroe-files">
+                <thead class="thead-dark">
+                  <tr>
+                    <th class="pyroe" scope="col">reference</th>
+                    <th class="pyroe" scope="col">ref_data</th>
+                    <th class="pyroe" scope="col">fasta</th>
+                    <th class="pyroe" scope="col">gtf</th>
+                    <th class="pyroe" scope="col">extra_spliced</th>
+                    <th class="pyroe" scope="col">extra_unspliced</th>
+                  </tr>
+                  <tr style="height:45px"></tr>
+                </thead>    
+              </table>
+        </div>
+        <div class="input-group pyroe mb-3">
+            <button id="pyroe-download" class="add">Download</button>
+        </div>
+    </div>
+
+
+
+    <div class="mb-3 container sample-container">
+        <h4 style="text-align: center; width: 900px;" class="mb-3">Salmon and Alevin-Fry: Sample Sheet</h4>
+        <div class="mb-3 input-group sample">
+            <div class = "input-group-prepend prepend-wide">
+                <button class="btn dropdown-toggle prepend" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chemistry</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item">Chromium V2</a>
+                    <a class="dropdown-item">Chromium V3</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item">Custom</a>
+               </div>
+            </div>
+            <span class="input-group-text chemistry">Chemistry: </span>    
+        </div>
+        <div class="mb-3 input-group sample">
+            <div class = "input-group-prepend prepend-wide">
+                <span class="input-group-text prepend">Reference</span>
+            </div>
+            <input id="ref-name-samp" class="text" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" type="text" value="" placeholder="Reference name">    
+        </div>
+        <div class="mb-3 input-group sample">
+            <div class = "input-group-prepend prepend-wide">
+                <span class="input-group-text prepend">Data Set Name</span>
+            </div>
+            <input id="data-name-samp" class="text" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" type="text" value="" placeholder="">    
+        </div>
+        <div class="input-group pyroe mb-3">   
+            <div class = "input-group-prepend prepend-wide">
+                <span class="input-group-text prepend">Dataset URL</span>
+            </div>
+            <input id="data-url" type="text" class="text" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" value="" placeholder="Optional">
+        </div>
+        <div class="input-group pyroe mb-3">        
+            <div class = "input-group-prepend prepend-wide">
+                <span class="input-group-text prepend">fastq file</span>
+            </div>
+            <input id="fastq-path" type="text" class="text" value="" placeholder="Upload file, provide URL, or relative path within reference files">
+            <div class="input-group-append append">
+                <input class="file" type="file" id="fastq-file" hidden>
+                <label for="fastq-file" class="file">Choose File</label>
+                <span title="" id="fastq-chosen" class="file-chose"></span>
+            </div>
+        </div>
+        <div class="input-group pyroe mb-3">   
+            <div class = "input-group-prepend prepend-wide">
+                <span class="input-group-text prepend">fastq MD5sum</span>
+            </div>
+            <input id="md5sum" type="text" class="text" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" value="" placeholder="Optional - Only needed if fastq is URL">
+        </div>
+        <div class="input-group pyroe mb-3">
+            <span>Additional Options</input>
+            <a id='add-opts-samp' style="color: black" data-toggle="collapse" href="#additional-opts-sample" role="button" aria-expanded="false" aria-controls="additional-opt-sample">&#9660;</a>
+        </div>
+        <div class="collapse multi-collapse card card-collapse sample" style="border:0px;" id="additional-opts-sample">
+            <div class="input-group sample mb-3">        
+                <div class = "input-group-prepend prepend-exwide">
+                    <span class="input-group-text prepend">Feature Barcode CSV</span>
+                </div>
+                <input id="ft-bc-path" type="text" class="text" value="" placeholder="Upload file, provide URL, or relative path within reference files">
+                <div class="input-group-append append">
+                    <input class="file" type="file" id="ft-bc-file" hidden>
+                    <label for="ft-bc-file" class="file">Choose File</label>
+                    <span title="" id="ft-bc-chosen" class="file-chose"></span>
+                </div>
+            </div>
+            <div class="input-group sample mb-3">        
+                <div class = "input-group-prepend prepend-exwide">
+                    <span class="input-group-text prepend">Multiplexing Library CSV</span>
+                </div>
+                <input id="mp-lib-path" type="text" class="text" value="" placeholder="Upload file, provide URL, or relative path within reference files">
+                <div class="input-group-append append">
+                    <input class="file" type="file" id="mp-lib-file" hidden>
+                    <label for="mp-lib-file" class="file">Choose File</label>
+                    <span title="" id="mp-lib-chosen" class="file-chose"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input-group sample mb-3">
+            <button id="sample-add-files" class="add">Add Files</button>
+        </div>
+        <div class="sample scroll-samp mb-3">
+            <table class="table sample-table" style="border-color: black;" id="sample-files">
+                <thead class="thead-dark">
+                  <tr>
+                    <th class="sample" scope="col">chemistry</th>
+                    <th class="sample" scope="col">reference</th>
+                    <th class="sample" scope="col">dataset_name</th>
+                    <th class="sample" scope="col">dataset_url</th>
+                    <th class="sample" scope="col">fastq_url</th>
+                    <th class="sample" scope="col">fastq_MD5sum</th>
+                    <th class="sample" scope="col">delete_fastq</th>
+                    <th class="sample" scope="col">feature_barcode_csv_url</th>
+                    <th class="sample" scope="col">multiplexing_library_csv_url</th>
+                  </tr>
+                  <tr style="height:45px"></tr>
+                </thead>    
+              </table>
+        </div>
+        <div class="input-group pyroe mb-3">
+            <button id="samp-download" class="add">Download</button>
+        </div>
+    </div>
+
+</body>
+<script src="pyroe.js"></script>
+<script src="sample_sheet.js"></script>
+</html>
+
