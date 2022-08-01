@@ -133,6 +133,30 @@ div.prepend {
   border-right:0px;
 }
 
+div.label {
+  text-align:center;
+  align-items: center;
+  margin-right:0px;
+  background-color: #095078;
+  border-radius: 15px;
+  border: 2px solid #FF8080;;
+  color:#FF8080;
+  padding:0px;
+  width:120px;
+}
+
+div.label-wide {
+  text-align:center;
+  align-items: center;
+  margin-right:0px;
+  background-color: #095078;
+  border-radius: 15px;
+  border: 2px solid #FF8080;;
+  color:#FF8080;
+  padding:0px;
+  width:300px;
+}
+
 div.prepend-wide {
   text-align:center;
   align-items: center;
@@ -192,14 +216,26 @@ div.append {
 }
 
 span.prepend {
-  margin-left: 6px;
-  text-align:center;
-  align-items: center;
   color: #85E79C;
   background-color: #095078;
   border: 0px;
   border-radius: 15px;
-  padding-left: 6px;
+}
+
+input.text:focus {
+    outline: none;
+}
+
+input.text:disabled{
+  background-color: #c9c9c9;
+}
+
+span.prepend-check {
+  color: #85E79C;
+  background-color: #095078;
+  border: 0px;
+  border-radius: 15px;
+  padding-left:4px;
 }
 
 

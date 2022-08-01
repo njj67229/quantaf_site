@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://localhost:5006/app -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="bk" type="text/css">.bk-root{position:relative;width:auto;height:auto;box-sizing:border-box;font-family:Helvetica, Arial, sans-serif;font-size:13px;}.bk-root .bk,.bk-root .bk:before,.bk-root .bk:after{box-sizing:inherit;margin:0;border:0;padding:0;background-image:none;font-family:inherit;font-size:100%;line-height:1.42857143;}.bk-root pre.bk{font-family:Courier, monospace;}.bk-root .bk-logo{margin:5px;position:relative;display:block;background-repeat:no-repeat;}.bk-root .bk-logo.bk-grey{filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");filter:gray;-webkit-filter:grayscale(100%);}.bk-root .bk-logo-small{width:20px;height:20px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAOkSURBVDiNjZRtaJVlGMd/1/08zzln5zjP1LWcU9N0NkN8m2CYjpgQYQXqSs0I84OLIC0hkEKoPtiH3gmKoiJDU7QpLgoLjLIQCpEsNJ1vqUOdO7ppbuec5+V+rj4ctwzd8IIbbi6u+8f1539dt3A78eXC7QizUF7gyV1fD1Yqg4JWz84yffhm0qkFqBogB9rM8tZdtwVsPUhWhGcFJngGeWrPzHm5oaMmkfEg1usvLFyc8jLRqDOMru7AyC8saQr7GG7f5fvDeH7Ej8CM66nIF+8yngt6HWaKh7k49Soy9nXurCi1o3qUbS3zWfrYeQDTB/Qj6kX6Ybhw4B+bOYoLKCC9H3Nu/leUTZ1JdRWkkn2ldcCamzrcf47KKXdAJllSlxAOkRgyHsGC/zRday5Qld9DyoM4/q/rUoy/CXh3jzOu3bHUVZeU+DEn8FInkPBFlu3+nW3Nw0mk6vCDiWg8CeJaxEwuHS3+z5RgY+YBR6V1Z1nxSOfoaPa4LASWxxdNp+VWTk7+4vzaou8v8PN+xo+KY2xsw6une2frhw05CTYOmQvsEhjhWjn0bmXPjpE1+kplmmkP3suftwTubK9Vq22qKmrBhpY4jvd5afdRA3wGjFAgcnTK2s4hY0/GPNIb0nErGMCRxWOOX64Z8RAC4oCXdklmEvcL8o0BfkNK4lUg9HTl+oPlQxdNo3Mg4Nv175e/1LDGzZen30MEjRUtmXSfiTVu1kK8W4txyV6BMKlbgk3lMwYCiusNy9fVfvvwMxv8Ynl6vxoByANLTWplvuj/nF9m2+PDtt1eiHPBr1oIfhCChQMBw6Aw0UulqTKZdfVvfG7VcfIqLG9bcldL/+pdWTLxLUy8Qq38heUIjh4XlzZxzQm19lLFlr8vdQ97rjZVOLf8nclzckbcD4wxXMidpX30sFd37Fv/GtwwhzhxGVAprjbg0gCAEeIgwCZyTV2Z1REEW8O4py0wsjeloKoMr6iCY6dP92H6Vw/oTyICIthibxjm/DfN9lVz8IqtqKYLUXfoKVMVQVVJOElGjrnnUt9T9wbgp8AyYKaGlqingHZU/uG2NTZSVqwHQTWkx9hxjkpWDaCg6Ckj5qebgBVbT3V3NNXMSiWSDdGV3hrtzla7J+duwPOToIg42ChPQOQjspnSlp1V+Gjdged7+8UN5CRAV7a5EdFNwCjEaBR27b3W890TE7g24NAP/mMDXRWrGoFPQI9ls/MWO2dWFAar/xcOIImbbpA3zgAAAABJRU5ErkJggg==);}.bk-root .bk-logo-notebook{display:inline-block;vertical-align:middle;margin-right:5px;}.rendered_html .bk-root .bk-tooltip table,.rendered_html .bk-root .bk-tooltip tr,.rendered_html .bk-root .bk-tooltip th,.rendered_html .bk-root .bk-tooltip td{border:none;padding:1px;}.bk-root .bk-clearfix:before,.bk-root .bk-clearfix:after{content:"";display:table;}.bk-root .bk-clearfix:after{clear:both;}.bk-root .bk-input{display:inline-block;width:100%;flex-grow:1;min-height:31px;padding:0 12px;background-color:#fff;border:1px solid #ccc;border-radius:4px;}.bk-root .bk-input:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);}.bk-root .bk-input::placeholder,.bk-root .bk-input:-ms-input-placeholder,.bk-root .bk-input::-moz-placeholder,.bk-root .bk-input::-webkit-input-placeholder{color:#999;opacity:1;}.bk-root .bk-input[disabled]{cursor:not-allowed;background-color:#eee;opacity:1;}.bk-root select:not([multiple]).bk-input,.bk-root select:not([size]).bk-input{height:auto;appearance:none;-webkit-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg version="1.1" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg"><path d="M 0,0 25,0 12.5,20 Z" fill="black" /></svg>');background-position:right 0.5em center;background-size:8px 6px;background-repeat:no-repeat;}.bk-root select[multiple].bk-input,.bk-root select[size].bk-input,.bk-root textarea.bk-input{height:auto;}.bk-root .bk-input-group{width:100%;height:100%;display:inline-flex;flex-wrap:nowrap;align-items:start;flex-direction:column;white-space:nowrap;}.bk-root .bk-input-group.bk-inline{flex-direction:row;}.bk-root .bk-input-group.bk-inline > *:not(:first-child){margin-left:5px;}.bk-root .bk-input-group input[type="checkbox"] + span,.bk-root .bk-input-group input[type="radio"] + span{position:relative;top:-2px;margin-left:3px;}.bk-root .bk-input-group > .bk-spin-wrapper{display:inherit;width:inherit;height:inherit;position:relative;overflow:hidden;padding:0;vertical-align:middle;}.bk-root .bk-input-group > .bk-spin-wrapper input{padding-right:20px;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn{position:absolute;display:block;height:50%;min-height:0;min-width:0;width:30px;padding:0;margin:0;right:0;border:none;background:none;cursor:pointer;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn:before{content:"";display:inline-block;transform:translateY(-50%);border-left:5px solid transparent;border-right:5px solid transparent;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn.bk-spin-btn-up{top:0;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn.bk-spin-btn-up:before{border-bottom:5px solid black;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn.bk-spin-btn-up:disabled:before{border-bottom-color:grey;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn.bk-spin-btn-down{bottom:0;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn.bk-spin-btn-down:before{border-top:5px solid black;}.bk-root .bk-input-group > .bk-spin-wrapper > .bk-spin-btn.bk-spin-btn-down:disabled:before{border-top-color:grey;}.bk-root .bk-btn{height:100%;display:inline-block;text-align:center;vertical-align:middle;white-space:nowrap;cursor:pointer;padding:6px 12px;font-size:12px;border:1px solid transparent;border-radius:4px;outline:0;user-select:none;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;}.bk-root .bk-btn:hover,.bk-root .bk-btn:focus{text-decoration:none;}.bk-root .bk-btn:active,.bk-root .bk-btn.bk-active{background-image:none;box-shadow:inset 0 3px 5px rgba(0, 0, 0, 0.125);}.bk-root .bk-btn[disabled]{cursor:not-allowed;pointer-events:none;opacity:0.65;box-shadow:none;}.bk-root .bk-btn-default{color:#333;background-color:#fff;border-color:#ccc;}.bk-root .bk-btn-default:hover{background-color:#f5f5f5;border-color:#b8b8b8;}.bk-root .bk-btn-default.bk-active{background-color:#ebebeb;border-color:#adadad;}.bk-root .bk-btn-default[disabled],.bk-root .bk-btn-default[disabled]:hover,.bk-root .bk-btn-default[disabled]:focus,.bk-root .bk-btn-default[disabled]:active,.bk-root .bk-btn-default[disabled].bk-active{background-color:#e6e6e6;border-color:#ccc;}.bk-root .bk-btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd;}.bk-root .bk-btn-primary:hover{background-color:#3681c1;border-color:#2c699e;}.bk-root .bk-btn-primary.bk-active{background-color:#3276b1;border-color:#285e8e;}.bk-root .bk-btn-primary[disabled],.bk-root .bk-btn-primary[disabled]:hover,.bk-root .bk-btn-primary[disabled]:focus,.bk-root .bk-btn-primary[disabled]:active,.bk-root .bk-btn-primary[disabled].bk-active{background-color:#506f89;border-color:#357ebd;}.bk-root .bk-btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c;}.bk-root .bk-btn-success:hover{background-color:#4eb24e;border-color:#409240;}.bk-root .bk-btn-success.bk-active{background-color:#47a447;border-color:#398439;}.bk-root .bk-btn-success[disabled],.bk-root .bk-btn-success[disabled]:hover,.bk-root .bk-btn-success[disabled]:focus,.bk-root .bk-btn-success[disabled]:active,.bk-root .bk-btn-success[disabled].bk-active{background-color:#667b66;border-color:#4cae4c;}.bk-root .bk-btn-warning{color:#fff;background-color:#f0ad4e;border-color:#eea236;}.bk-root .bk-btn-warning:hover{background-color:#eea43b;border-color:#e89014;}.bk-root .bk-btn-warning.bk-active{background-color:#ed9c28;border-color:#d58512;}.bk-root .bk-btn-warning[disabled],.bk-root .bk-btn-warning[disabled]:hover,.bk-root .bk-btn-warning[disabled]:focus,.bk-root .bk-btn-warning[disabled]:active,.bk-root .bk-btn-warning[disabled].bk-active{background-color:#c89143;border-color:#eea236;}.bk-root .bk-btn-danger{color:#fff;background-color:#d9534f;border-color:#d43f3a;}.bk-root .bk-btn-danger:hover{background-color:#d5433e;border-color:#bd2d29;}.bk-root .bk-btn-danger.bk-active{background-color:#d2322d;border-color:#ac2925;}.bk-root .bk-btn-danger[disabled],.bk-root .bk-btn-danger[disabled]:hover,.bk-root .bk-btn-danger[disabled]:focus,.bk-root .bk-btn-danger[disabled]:active,.bk-root .bk-btn-danger[disabled].bk-active{background-color:#a55350;border-color:#d43f3a;}.bk-root .bk-btn-light{color:#333;background-color:#fff;border-color:#ccc;border-color:transparent;}.bk-root .bk-btn-light:hover{background-color:#f5f5f5;border-color:#b8b8b8;}.bk-root .bk-btn-light.bk-active{background-color:#ebebeb;border-color:#adadad;}.bk-root .bk-btn-light[disabled],.bk-root .bk-btn-light[disabled]:hover,.bk-root .bk-btn-light[disabled]:focus,.bk-root .bk-btn-light[disabled]:active,.bk-root .bk-btn-light[disabled].bk-active{background-color:#e6e6e6;border-color:#ccc;}.bk-root .bk-btn-group{height:100%;display:flex;flex-wrap:nowrap;align-items:center;}.bk-root .bk-btn-group:not(.bk-vertical),.bk-root .bk-btn-group.bk-horizontal{flex-direction:row;}.bk-root .bk-btn-group.bk-vertical{flex-direction:column;}.bk-root .bk-btn-group > .bk-btn{flex-grow:1;}.bk-root .bk-btn-group:not(.bk-vertical) > .bk-btn + .bk-btn{margin-left:-1px;}.bk-root .bk-btn-group.bk-vertical > .bk-btn + .bk-btn{margin-top:-1px;}.bk-root .bk-btn-group:not(.bk-vertical) > .bk-btn:first-child:not(:last-child){border-bottom-right-radius:0;border-top-right-radius:0;}.bk-root .bk-btn-group.bk-vertical > .bk-btn:first-child:not(:last-child){border-bottom-left-radius:0;border-bottom-right-radius:0;}.bk-root .bk-btn-group:not(.bk-vertical) > .bk-btn:not(:first-child):last-child{border-bottom-left-radius:0;border-top-left-radius:0;}.bk-root .bk-btn-group.bk-vertical > .bk-btn:not(:first-child):last-child{border-top-left-radius:0;border-top-right-radius:0;}.bk-root .bk-btn-group > .bk-btn:not(:first-child):not(:last-child){border-radius:0;}.bk-root .bk-btn-group.bk-vertical > .bk-btn{width:100%;}.bk-root .bk-btn-group .bk-dropdown-toggle{flex:0 0 0;padding:6px 6px;}</style>
+    
+    <title>Panel Application</title>
+    <link rel="stylesheet" href="./Panel Application_files/notyf.min.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/all.min.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/widgets.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/debugger.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/json.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/markdown.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/loading.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/alerts.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/dataframe.css" type="text/css">
+    <link rel="stylesheet" href="./Panel Application_files/card.css" type="text/css">
+    <style>
+        
+    .bk.pn-loading.arcs:before {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0ibWFyZ2luOiBhdXRvOyBiYWNrZ3JvdW5kOiBub25lOyBkaXNwbGF5OiBibG9jazsgc2hhcGUtcmVuZGVyaW5nOiBhdXRvOyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4gIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjMyIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZT0iI2MzYzNjMyIgc3Ryb2tlLWRhc2hhcnJheT0iNTAuMjY1NDgyNDU3NDM2NjkgNTAuMjY1NDgyNDU3NDM2NjkiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+ICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZHVyPSIxcyIga2V5VGltZXM9IjA7MSIgdmFsdWVzPSIwIDUwIDUwOzM2MCA1MCA1MCI+PC9hbmltYXRlVHJhbnNmb3JtPiAgPC9jaXJjbGU+PC9zdmc+");
+      background-size: auto calc(min(50%, 400px));
+    }
+    
+    </style>
+    <style>
+        
+.bk.space-top {
+    margin-top:6.5px;
+}
+.bk.space-top-check {
+    margin-top:8.5px;
+}
+.bk.space-top-file {
+    margin-top:4.5px;
+}
+
+.bk.space-left {
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:0px;
+    padding-right:0px;
+}
+.bk.panel {
+    background-color: #ffe5db;
+}
+
+    </style>
+<script type="text/javascript" src="./Panel Application_files/bokeh.min.js.download"></script><script type="text/javascript" src="./Panel Application_files/bokeh-gl.min.js.download"></script><script type="text/javascript" src="./Panel Application_files/bokeh-widgets.min.js.download"></script><script type="text/javascript" src="./Panel Application_files/bokeh-tables.min.js.download"></script><script type="text/javascript" src="./Panel Application_files/notyf.min.js.download"></script><script type="text/javascript" src="./Panel Application_files/panel.min.js.download"></script><style media="screen">.json-formatter-row {
+  font-family: monospace;
+}
+.json-formatter-row,
+.json-formatter-row a,
+.json-formatter-row a:hover {
+  color: black;
+  text-decoration: none;
+}
+.json-formatter-row .json-formatter-row {
+  margin-left: 1rem;
+}
+.json-formatter-row .json-formatter-children.json-formatter-empty {
+  opacity: 0.5;
+  margin-left: 1rem;
+}
+.json-formatter-row .json-formatter-children.json-formatter-empty:after {
+  display: none;
+}
+.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {
+  content: "No properties";
+}
+.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {
+  content: "[]";
+}
+.json-formatter-row .json-formatter-string,
+.json-formatter-row .json-formatter-stringifiable {
+  color: green;
+  white-space: pre;
+  word-wrap: break-word;
+}
+.json-formatter-row .json-formatter-number {
+  color: blue;
+}
+.json-formatter-row .json-formatter-boolean {
+  color: red;
+}
+.json-formatter-row .json-formatter-null {
+  color: #855A00;
+}
+.json-formatter-row .json-formatter-undefined {
+  color: #ca0b69;
+}
+.json-formatter-row .json-formatter-function {
+  color: #FF20ED;
+}
+.json-formatter-row .json-formatter-date {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.json-formatter-row .json-formatter-url {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+.json-formatter-row .json-formatter-bracket {
+  color: blue;
+}
+.json-formatter-row .json-formatter-key {
+  color: #00008B;
+  padding-right: 0.2rem;
+}
+.json-formatter-row .json-formatter-toggler-link {
+  cursor: pointer;
+}
+.json-formatter-row .json-formatter-toggler {
+  line-height: 1.2rem;
+  font-size: 0.7rem;
+  vertical-align: middle;
+  opacity: 0.6;
+  cursor: pointer;
+  padding-right: 0.2rem;
+}
+.json-formatter-row .json-formatter-toggler:after {
+  display: inline-block;
+  transition: transform 100ms ease-in;
+  content: "►";
+}
+.json-formatter-row > a > .json-formatter-preview-text {
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
+  font-style: italic;
+}
+.json-formatter-row:hover > a > .json-formatter-preview-text {
+  opacity: 0.6;
+}
+.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {
+  transform: rotate(90deg);
+}
+.json-formatter-row.json-formatter-open > .json-formatter-children:after {
+  display: inline-block;
+}
+.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {
+  display: none;
+}
+.json-formatter-row.json-formatter-open.json-formatter-empty:after {
+  display: block;
+}
+.json-formatter-dark.json-formatter-row {
+  font-family: monospace;
+}
+.json-formatter-dark.json-formatter-row,
+.json-formatter-dark.json-formatter-row a,
+.json-formatter-dark.json-formatter-row a:hover {
+  color: white;
+  text-decoration: none;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-row {
+  margin-left: 1rem;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty {
+  opacity: 0.5;
+  margin-left: 1rem;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty:after {
+  display: none;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {
+  content: "No properties";
+}
+.json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {
+  content: "[]";
+}
+.json-formatter-dark.json-formatter-row .json-formatter-string,
+.json-formatter-dark.json-formatter-row .json-formatter-stringifiable {
+  color: #31F031;
+  white-space: pre;
+  word-wrap: break-word;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-number {
+  color: #66C2FF;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-boolean {
+  color: #EC4242;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-null {
+  color: #EEC97D;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-undefined {
+  color: #ef8fbe;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-function {
+  color: #FD48CB;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-date {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.json-formatter-dark.json-formatter-row .json-formatter-url {
+  text-decoration: underline;
+  color: #027BFF;
+  cursor: pointer;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-bracket {
+  color: #9494FF;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-key {
+  color: #23A0DB;
+  padding-right: 0.2rem;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-toggler-link {
+  cursor: pointer;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-toggler {
+  line-height: 1.2rem;
+  font-size: 0.7rem;
+  vertical-align: middle;
+  opacity: 0.6;
+  cursor: pointer;
+  padding-right: 0.2rem;
+}
+.json-formatter-dark.json-formatter-row .json-formatter-toggler:after {
+  display: inline-block;
+  transition: transform 100ms ease-in;
+  content: "►";
+}
+.json-formatter-dark.json-formatter-row > a > .json-formatter-preview-text {
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
+  font-style: italic;
+}
+.json-formatter-dark.json-formatter-row:hover > a > .json-formatter-preview-text {
+  opacity: 0.6;
+}
+.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {
+  transform: rotate(90deg);
+}
+.json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-children:after {
+  display: inline-block;
+}
+.json-formatter-dark.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {
+  display: none;
+}
+.json-formatter-dark.json-formatter-row.json-formatter-open.json-formatter-empty:after {
+  display: block;
+}
+</style><script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>  </head>
+  <body>
+    <div class="bk-root" id="abe3a2cb-9586-42c3-8f16-c36b6fbb0744" data-root-id="1002"><div class="bk panel" style="position: relative; display: block; left: 0px; top: 0px; width: 600px; height: 290px; margin: 0px;"><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 735px; height: 41px;"><div class="bk space-top" style="position: absolute; display: block; left: 5px; top: 5px; width: 85px; height: 19px;"><div class="bk bk-clearfix" style="display: inline-block;">Reference File</div></div><div class="bk" style="position: absolute; display: block; left: 105px; top: 5px; width: 300px; height: 31px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="Upload a file or provide a URL" maxlength="5000"></div></div><div class="bk space-top-file" style="position: absolute; display: block; left: 425px; top: 5px; width: 300px; height: 21px;"><input class="bk" type="file"></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 41px; width: 736px; height: 41px;"><div class="bk space-top" style="position: absolute; display: block; left: 5px; top: 5px; width: 53px; height: 19px;"><div class="bk bk-clearfix" style="display: inline-block;">fasta File</div></div><div class="bk" style="position: absolute; display: block; left: 68px; top: 5px; width: 23px; height: 31px;"></div><div class="bk" style="position: absolute; display: block; left: 106px; top: 5px; width: 300px; height: 31px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="Upload a file or provide a URL" maxlength="5000"></div></div><div class="bk space-top-file" style="position: absolute; display: block; left: 426px; top: 5px; width: 300px; height: 21px;"><input class="bk" type="file"></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 82px; width: 735px; height: 41px;"><div class="bk space-top" style="position: absolute; display: block; left: 5px; top: 5px; width: 40px; height: 19px;"><div class="bk bk-clearfix" style="display: inline-block;">gtf File</div></div><div class="bk" style="position: absolute; display: block; left: 55px; top: 5px; width: 35px; height: 31px;"></div><div class="bk" style="position: absolute; display: block; left: 105px; top: 5px; width: 300px; height: 31px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="Upload a file or provide a URL" maxlength="5000"></div></div><div class="bk space-top-file" style="position: absolute; display: block; left: 425px; top: 5px; width: 300px; height: 21px;"><input class="bk" type="file"></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 123px; width: 415px; height: 41px;"><div class="bk space-top" style="position: absolute; display: block; left: 5px; top: 5px; width: 75px; height: 19px;"><div class="bk bk-clearfix" style="display: inline-block;">Read Length</div></div><div class="bk" style="position: absolute; display: block; left: 90px; top: 5px; width: 0px; height: 13px;"><div class="bk bk-clearfix" style="display: inline-block;"></div></div><div class="bk" style="position: absolute; display: block; left: 105px; top: 5px; width: 300px; height: 31px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="" maxlength="5000"></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 164px; width: 320px; height: 29px;"><div class="bk" style="position: absolute; display: block; left: 10px; top: 5px; width: 300px; height: 19px;"><div class="bk bk-input-group"><label class="bk"><input class="bk" type="checkbox" value="0"><span class="bk">Additional Options</span></label></div></div></div><div class="bk" style="position: absolute; display: none; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk space-top-check" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk"><input class="bk" type="checkbox" value="0"><span class="bk">Filename-prefix</span></label></div></div><div class="bk" style="position: absolute; display: none; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="Prefix" maxlength="5000"></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk space-top-check" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk"><input class="bk" type="checkbox" value="0"><span class="bk">Flank Trim Length</span></label></div></div><div class="bk" style="position: absolute; display: none; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="Trim Length" maxlength="5000"></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk space-top-check" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk"><input class="bk" type="checkbox" value="0"><span class="bk">Extra Spliced Fasta</span></label></div></div><div class="bk" style="position: absolute; display: none; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="Upload file or provide URL" maxlength="5000"></div></div><div class="bk space-top-file" style="position: absolute; display: none; left: 0px; top: 0px; width: 0px; height: 0px;"><input class="bk" type="file"></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk space-top-check" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk"><input class="bk" type="checkbox" value="0"><span class="bk">Extra Unspliced Fasta</span></label></div></div><div class="bk" style="position: absolute; display: none; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk" style="display: none;"></label><input class="bk bk-input" type="text" name="" placeholder="Upload file or provide URL" maxlength="5000"></div></div><div class="bk space-top-file" style="position: absolute; display: none; left: 0px; top: 0px; width: 0px; height: 0px;"><input class="bk" type="file"></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-clearfix" style="display: inline-block;"></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk"><input class="bk" type="checkbox" value="0"><span class="bk">Deduplicate Identical Sequences</span></label></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 0px; width: 0px; height: 0px;"><div class="bk bk-input-group"><label class="bk"><input class="bk" type="checkbox" value="0"><span class="bk">Consider Flank Lengths for Merge</span></label></div></div></div><div class="bk" style="position: absolute; display: block; left: 10px; top: 198px; width: 580px; height: 32px;"><div class="bk bk-btn-group"><button class="bk bk-btn bk-btn-default" type="button">Generate Config File!</button></div></div><div class="bk markdown" style="position: absolute; display: block; left: 5px; top: 240px; width: 150px; height: 45px;"><div class="bk bk-clearfix" style="display: inline-block; width: 150px;"><p>None</p></div></div></div></div>
+  <div class="bk-root" id="94630018-a67a-4ead-b807-b18f9b5b2835" data-root-id="1051"></div>
+  
+    <script type="application/json" id="1052">
+      {}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('1052').textContent;
+              const render_items = [{"root_ids":["1002","1051"],"roots":{"1002":"abe3a2cb-9586-42c3-8f16-c36b6fbb0744","1051":"94630018-a67a-4ead-b807-b18f9b5b2835"},"token":"eyJzZXNzaW9uX2lkIjogIlV4U1AxbXVoeXVGbDA2UGhIVE56dU1idGxLMkVSSHl4aW9RVTR1OFZiMnZKIiwgInNlc3Npb25fZXhwaXJ5IjogMTY1ODQyMjcwOCwgIl9fYmtfX3psaWJfIjogImVOcDFVMkZQMnpBUV9TdFJQZzJXdExianBFa3JOSFV3b0lKRTIyaUZrQ3BOam4xSlRGTzdwQ21VVXY3N25LWXdpclRraV8zZTNidTdaX3ZGTG9BSnFKWjIzM3F4TF9XeU5ndTcxSnlWaGRuMGZZUUMyN0hzVTYwVThGcHExZkF6Z0lYTFN2a0lEWGNEM0QwdDNBbHJxS25kU1hUZEhSNTlyNWdTVTN2d2VESzFvMmhxQXFmMmhkWjVDZFpwVWVrNTdEbU12SmJjb1hJMV80Z2Z5THV4VG1VSlRaVnY2SkQ1V2JJNjA5Vzg3ZUJXS3FHZmxtMzZaSkZYWmtKM3BKYkFWeFc0di1GaEJjdTZtZGpHdTRnbFZPNHdCN1diUGRZYldaYXM2M2VROVdXdlpDVmpDNk1PR2xnR0NPakFXZ2YweUJvdUZpWGNRbm9sNjY3djlUcGVZSDI1dWh6SDE0NVZ5aGxZRjhCbi1tZ19iZGZNMDBITmI5MndqRlZ5bjlJME1PUWNGcnZpTmF6cmJsSFBTNGNaY2NsWjQzaDMzU0JmMTVfUmVUbDRPRUdkeUpGemxrT1hQY3BzdjN5Q2RQR0dMbFR1SEhlUGQ2SGhnY0JTNWdxRUMydGVNSldEY1QzMVdzVTNjOC1oNW9WN0ktdWQ2VW9yT0dSaUxWckcxTTVaX1lsdGZOMGRGajdFejZDOVpVTHoxYnh4X2QwQzk0ZmlXa2lWTjNTLWtRdkhFcENac3dYSFNxc1BjZGVtNFpVWnI0a0Q1VTV1SEZEX1doOWxibUo2ZFdObXlyVlhJdkxUTEF4UnlBbEdZVWJDSHNrQ2hzRVBmZFlqVVVZcEVoa0NZUzZzX1dvVXVOWXpDZTJqLUxOZVZsbWpRcmFFWnNTa2l5M3pDR1ItNmlPZ1ZJU1Uta0wwRUNCS2U1NkllaUZzY2VDSGhIcEItM3BXeGduRjV1Qy1QeXczTkY4cml2dG9pMUdfeWFBRWtRQnZpZGZfVDhhVzBuNXk5b3ZFNDNNWmI1SWlKakZKTGtia2Jqd2pDUmw1ZDV2SmN6SVc5OG45M1hOOHowLTJXQkF1d2l6enNCOUZIdk93NlQta2FSajBPQWhLQTRGRGlvS1VwZ2dERFhpUTlhSVVBaDhvd2hSSEZPelgxN19MWUQ5SCJ9","use_for_title":false}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  
+</body></html>

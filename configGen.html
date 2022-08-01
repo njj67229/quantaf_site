@@ -21,19 +21,45 @@
           <a class="nav-link" id="tsv-tab" data-toggle="tab" href="#tsv" role="tab" aria-controls="tsv" aria-selected="false">Generate TSV Files</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Run quantAF</a>
         </li>
       </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane show active" id="config" role="tabpanel" aria-labelledby="config-tab">
-            <div class="mb-3 container pyroe-container">
-                <h4 style="text-align: center; width: 800px;" class="mb-3">Pyroe: Reference Files</h4>
+            <div style="width: 650px; min-width: 650px;" class="mb-3 container pyroe-container">
+                <h4 style="text-align: center;" class="mb-3">Pyroe Options</h4>
                 <div class="mb-3 input-group pyroe">
-                    <div class = "input-group-prepend prepend">
+                    <div class = "prepend-wide">
                         <span class="input-group-text prepend">Read Length</span>
                     </div>
-                    <input id="read-len" class="form-control-range" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;;" type="range" value="" placeholder="Read Length">    
-                </div>    
+                    <input class="text" style="width: 80px; padding-right:10px; border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" type="number"></input>
+                </div>
+                <div class="mb-3 input-group pyroe">
+                    <div class = "input-group-prepend prepend-wide">
+                        <input id="trim-check" style="margin-left:7px;" type="checkbox" value="">
+                        <span class="input-group-text prepend-check">Flank Trim Length</span>
+                    </div>
+                    <input id="flank-len" disabled="true" class="text" style="width: 80px; padding-right:10px; border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" type="number"></input>    
+                </div>
+                <div class="mb-3 input-group pyroe">
+                    <div class = "input-group-prepend prepend-wide">
+                        <input id="file-pref-check" style="margin-left:7px;" type="checkbox" value="">
+                        <span class="input-group-text prepend-check">Filename-Prefix</span>
+                    </div>
+                    <input id="file-pref" class="text" style="width:400px; border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" type="text" value="" disabled="true" placeholder="Prefix">    
+                </div>
+                <div class="mb-3 input-group pyroe">
+                    <div class = "input-group-prepend label-wide">
+                        <input id="dedup-seqs" style="margin-left:7px;" type="checkbox" value="">
+                        <span class="input-group-text prepend-check">Dedup Identical Seqs</span>
+                    </div>
+                </div>
+                <div class="mb-3 input-group pyroe">
+                    <div class = "input-group-prepend label-wide">
+                        <input id="flank-merge" style="margin-left:7px;" type="checkbox" value="">
+                        <span class="input-group-text prepend-check">Consider Flank Lengths for Merge</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="tab-pane" id="tsv" role="tabpanel" aria-labelledby="tsv-tab">
@@ -242,5 +268,6 @@
 </body>
 <script src="pyroe.js"></script>
 <script src="sample_sheet.js"></script>
+<script src="config.js"></script>
 </html>
 
