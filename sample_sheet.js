@@ -23,6 +23,12 @@ var sampTable = document.getElementById('sample-files')
 var addFiles = document.getElementById('sample-add-files');
 var download =document.getElementById('samp-download');
 
+var v2Chem = document.getElementById('v2')
+var v3Chem = document.getElementById('v3')
+var customChem = document.getElementById('custom-chem')
+var chemVal = document.getElementById('chem-val')
+
+var selectedChem = v2Chem;
 
 var text = "reference\tref_data\tfasta\tgtf\textra_spliced\textra_unspliced\n";
 var firstFile = true;
@@ -33,6 +39,15 @@ function handleAddOptsClick() {
     } else {
         addOpts.textContent = '\u25B2';
     }
+}
+
+function swapChem() {
+    selectedChem.style.backgroundColor = "transparent";
+    selectedChem.style.color = "black";
+    selectedChem = this;
+    this.style.backgroundColor = "#095078";
+    this.style.color = "#85E79C";
+    chemVal.textContent = "Chemistry: " + selectedChem.textContent;
 }
 
 function addRow() {
@@ -110,3 +125,7 @@ addOpts.addEventListener('click', handleAddOptsClick);
 fastqFile.addEventListener('change', fastqCheckUpload);
 ftBcFile.addEventListener('change', ftBcCheckUpload);
 mpLibFile.addEventListener('change', mpLibCheckUpload);
+
+v2Chem.addEventListener('click', swapChem);
+v3Chem.addEventListener('click', swapChem);
+customChem.addEventListener('click', swapChem);

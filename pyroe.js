@@ -1,4 +1,4 @@
-var addOpts = document.getElementById('add-opts');
+var addOptsRoe = document.getElementById('add-opts');
 
 var pyRefName = document.getElementById('ref-name');
 var refPath = document.getElementById('ref-path');
@@ -30,10 +30,10 @@ var text = "reference\tref_data\tfasta\tgtf\textra_spliced\textra_unspliced\n";
 var firstFile = true;
 
 function handleAddOptsClick() {
-    if(addOpts.textContent === '&#9660' || addOpts.textContent === '\u25B2') {
-        addOpts.textContent = '\u25BC';
+    if(addOptsRoe.textContent === '&#9660' || addOptsRoe.textContent === '\u25B2') {
+        addOptsRoe.textContent = '\u25BC';
     } else {
-        addOpts.textContent = '\u25B2';
+        addOptsRoe.textContent = '\u25B2';
     }
 }
 
@@ -123,7 +123,7 @@ function getFile(filename, fileText) {
 
 download.addEventListener('click', pyroeDownload)
 addFiles.addEventListener('click', addRow);
-addOpts.addEventListener('click', handleAddOptsClick);
+addOptsRoe.addEventListener('click', handleAddOptsClick);
 refFile.addEventListener('change', refCheckUpload);
 fastaFile.addEventListener('change', fastaCheckUpload);
 gtfFile.addEventListener('change', gtfCheckUpload);

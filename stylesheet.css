@@ -1,3 +1,8 @@
+
+body {
+  overflow-y: scroll;
+}
+
 div.pyroe {
   float:left;
   background-color:#A8A8A8;
@@ -26,6 +31,26 @@ div.pyroe-container {
   min-width: 800px;
 }
 
+div.header {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  background-color: #A8A8A8;
+}
+
+div.banner {
+  width: 100%;
+  height: 6px;
+}
+
+.color-salmon {
+  background-color: #FF8080;
+}
+
+.color-lime {
+  background-color: #85E79C;
+}
+
 table.pyroe-table {
   margin:auto;
   background-color: gainsboro;
@@ -37,7 +62,7 @@ table.pyroe-table {
 table.sample-table {
   margin:auto;
   background-color: gainsboro;
-  width: 850px;
+  width: 870px;
   overflow-x: auto;
   max-height: 250px;
 }
@@ -82,7 +107,7 @@ span.file-chose {
 }
 
 span.chemistry {
-  width: 100px;
+  width: 200px;
   background-color: white;
   border-radius: 0px 15px 15px 0px;
   border: 2px solid #FF8080;
@@ -104,6 +129,7 @@ label.file {
   background-color: #85E79C;
   color: white;
   cursor: pointer;
+  color: #0070C0;
 }
 
 button.add{
@@ -116,6 +142,10 @@ input.file::-webkit-file-upload-button {
   border-radius: 6px;
   cursor: pointer;
   border: 0px;
+}
+
+a.dropdown-item:hover {
+  cursor: pointer;
 }
 
 a:hover { text-decoration: none; }
