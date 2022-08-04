@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <div style="background-image: url('./fish.jpg')">
     <div class="header" style="padding-bottom: 10px;">
         <img src="combine.png" style="float:right; width: 100px; height: 100px; margin-bottom: 5px; padding-bottom: 5px;" hidden="true"></image>
         <h3 style="color: #0070C0">quantAF - Alevin-Fry Pipeline</h3>
@@ -32,7 +31,7 @@
           <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Run quantAF</a>
         </li>
       </ul>
-    <div class="tab-content" style="background-image: url('./fish.jpg')" id="myTabContent">
+    <div class="tab-content" id="myTabContent">
         <div class="tab-pane show active mb-3" id="config" role="tabpanel" aria-labelledby="config-tab">
             <div style="width: 650px; min-width: 650px;;" class="mb-3 container pyroe-container">
                 <h4 style="text-align: center;" class="mb-3">Pyroe Options</h4>
@@ -71,8 +70,16 @@
             </div>
             <div class="container mb-3 pyroe-container">
                 <h4 style="text-align: center;" class="mb-3">Salmon Options</h4>
+                <div class="mb-3 input-group pyroe">
+                    <div class = "input-group-prepend label-wide">
+                        <input id="dedup-seqs" style="margin-left:7px;" type="checkbox" value="">
+                        <span class="input-group-text prepend-check">Use Knee Distance</span>
+                        <a style="text-decoration: underline dotted; text-underline-offset: 2px; vertical-align: auto; margin-top: auto; margin-bottom: auto;" data-toggle="tooltip" data-placement="left" title="Tooltip on left">help:</a>
+                    </div>
+                </div>    
             </div>
         </div>
+        <!--End Config Tab-->
         <div class="tab-pane" style="margin-bottom: 10px;" id="tsv" role="tabpanel" aria-labelledby="tsv-tab">
             <h3 style="margin-top: 6px; margin-left: 10px;">Generate tsv files</h3>
             <div class="mb-3 container pyroe-container">
