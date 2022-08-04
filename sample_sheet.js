@@ -10,6 +10,8 @@ var fastqFile = document.getElementById('fastq-file');
 var fastqChose = document.getElementById('fastq-chosen');
 
 var md5sum = document.getElementById('md5sum');
+var md5sumCheck = document.getElementById('md5sum-check');
+
 
 var ftBcPath = document.getElementById('ft-bc-path');
 var ftBcFile = document.getElementById('ft-bc-file');
@@ -20,18 +22,18 @@ var mpLibFile = document.getElementById('mp-lib-file');
 var mpLibChose = document.getElementById('mp-lib-chosen');
 
 var sampTable = document.getElementById('sample-files')
-var addFiles = document.getElementById('sample-add-files');
-var download =document.getElementById('samp-download');
+var addSampFiles = document.getElementById('sample-add-files');
+var downloadSamp = document.getElementById('samp-download');
 
 var v2Chem = document.getElementById('v2')
 var v3Chem = document.getElementById('v3')
 var customChem = document.getElementById('custom-chem')
 var chemVal = document.getElementById('chem-val')
 
-var selectedChem = v2Chem;
+var selectedChem = e;
 
-var text = "reference\tref_data\tfasta\tgtf\textra_spliced\textra_unspliced\n";
-var firstFile = true;
+var text = "chemistry\treference\tdataset_name\tdataset_url\tfastq_url\tfastq_MD5sum\tdelete_fastq\tfeature_barcode_csv_url\tmultiplexing_library_csv_url\n";
+var firstSampFile = true;
 
 function handleAddOptsClick() {
     if(addOpts.textContent === '&#9660' || addOpts.textContent === '\u25B2') {
@@ -53,23 +55,33 @@ function swapChem() {
 function addRow() {
     if (refName.value === "" || refPath.value === "" 
     || fastaPath.value === "" || gtfPath.value === "") {
+
     } else {
-        if(firstFile) {
+        if(firstSampFile) {
             pyroeTable.deleteRow(1);
             firstFile = false;
         }
-        var row = pyroeTable.insertRow(-1);
+
+        var text = "chemistry\treference\tdataset_name\tdataset_url\tfastq_url\tfastq_MD5sum\tdelete_fastq\tfeature_barcode_csv_url\tmultiplexing_library_csv_url\n";
+
+        var row = sampTable.insertRow(-1);
+        var chem = row.insertCell(-1);
         var reference = row.insertCell(-1);
-        var ref_data = row.insertCell(-1);
-        var fasta = row.insertCell(-1);
-        var gtf = row.insertCell(-1);
-        var extra_spl = row.insertCell(-1);
-        var extra_unspl = row.insertCell(-1);
+        var dataSetName = row.insertCell(-1);
+        var dataSetURL = row.insertCell(-1);
+        var fastq = row.insertCell(-1);
+        var fastqMD5 = row.insertCell(-1);
+        var deleteFastq = row.insertCell(-1);
+        var featureBarcode = row.insertCell(-1);
+        var multiPlex = row.insertCell(-1);
 
         text += refName.value + "\t" + refPath.value +
         "\t" + fastaPath.value + "\t" + gtfPath.value +
         "\t" + addSplPath.value + "\t" + addUnSplPath.value + "\n";
 
+        
+        chem.innerHTML = "v2";
+        chem.innerHTML = "v3";
 
         reference.innerHTML = refName.value;
         ref_data.innerHTML = refPath.value;
@@ -117,9 +129,12 @@ function getFile(filename, fileText) {
     document.body.removeChild(element);
 }
 
+function md5Enabled() {
+    md5sum.disabled = !md5sum.disabled;    
+}
 
-download.addEventListener('click', pyroeDownload)
-addFiles.addEventListener('click', addRow);
+downloadSamp.addEventListener('click', pyroeDownload)
+addSampFiles.addEventListener('click', addRow);
 addOpts.addEventListener('click', handleAddOptsClick);
 
 fastqFile.addEventListener('change', fastqCheckUpload);
@@ -129,3 +144,5 @@ mpLibFile.addEventListener('change', mpLibCheckUpload);
 v2Chem.addEventListener('click', swapChem);
 v3Chem.addEventListener('click', swapChem);
 customChem.addEventListener('click', swapChem);
+
+md5sumCheck.addEventListener('click', md5Enabled);

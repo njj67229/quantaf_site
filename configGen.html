@@ -72,9 +72,8 @@
                 <h4 style="text-align: center;" class="mb-3">Salmon Options</h4>
                 <div class="mb-3 input-group pyroe">
                     <div class = "input-group-prepend label-wide">
-                        <input id="dedup-seqs" style="margin-left:7px;" type="checkbox" value="">
-                        <span class="input-group-text prepend-check">Use Knee Distance</span>
-                        <a style="text-decoration: underline dotted; text-underline-offset: 2px; vertical-align: auto; margin-top: auto; margin-bottom: auto;" data-toggle="tooltip" data-placement="left" title="Tooltip on left">help:</a>
+                        <input id="knee-dist" style="margin-left:7px;" type="checkbox" checked="true" title="Generate CB Whitelist using Knee Distance - MUST BE USED UNLESS V2 or V3 Chemistry is used">
+                        <span class="input-group-text prepend-check" title="Generate CB Whitelist using Knee Distance - MUST BE USED UNLESS V2 or V3 Chemistry is used">Use Knee Distance for CB Whitelist</span>
                     </div>
                 </div>    
             </div>
@@ -188,7 +187,7 @@
                             <a id="custom-chem" class="dropdown-item">Custom</a>
                     </div>
                     </div>
-                    <span id="chem-val" class="input-group-text chemistry">Chemistry: </span>    
+                    <span id="chem-val" class="input-group-text chemistry">Chemistry: Chromium V2</span>    
                 </div>
                 <div class="mb-3 input-group sample">
                     <div class = "input-group-prepend prepend-wide">
@@ -221,9 +220,10 @@
                 </div>
                 <div class="input-group pyroe mb-3">   
                     <div class = "input-group-prepend prepend-wide">
+                        <input id="md5sum-check" style="margin-left:10px;" type="checkbox" value="">
                         <span class="input-group-text prepend">fastq MD5sum</span>
                     </div>
-                    <input id="md5sum" type="text" class="text" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" value="" placeholder="Optional - Only needed if fastq is URL">
+                    <input id="md5sum" type="text" class="text" style="border-radius: 0px 15px 15px 0px; border-right: 2px solid #FF8080;" value="" placeholder="Optional - Only needed if fastq is URL" disabled="true">
                 </div>
                 <div class="input-group pyroe mb-3">
                     <span>Additional Options</input>
