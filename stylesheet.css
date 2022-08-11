@@ -13,6 +13,15 @@ div.sample {
   background-color:#A8A8A8;
 }
 
+div.box {
+  background:#e8eaed;
+  position:absolute;
+  top:210.29px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
+
 div.sample-container {
   float:left;
   background-color:#A8A8A8;
